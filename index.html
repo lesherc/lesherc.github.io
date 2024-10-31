@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>cmlus.io</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/71cf60852f.js" crossorigin="anonymous"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      min-height: 100vh;
+      width: 100%;
+      font-family: "Raleway", sans-serif;
+      background-color: rgb(107, 143, 113);
+      overflow: auto;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background-color: rgb(29, 30, 24);
+      color: rgb(107, 143, 113);
+      margin: 2%;
+      border: 2px solid rgb(107, 143, 113);
+    }
+
+    .contents {
+      flex: 1;
+      margin: 10px;
+    }
+
+    #left_side {
+      width: 50%;
+      padding: 5%;
+    }
+
+    #right_side {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5% 8%;
+    }
+
+    h1 {
+      font-size: 45px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 1.3;
+      margin-top: 30px;
+      margin-left: 5px;
+      font-family: "Inconsolata";
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: rgb(166, 151, 156);
+    }
+
+    .outer-border {
+      display: inline-block;
+      padding: 10px;
+      border: 5px solid rgb(166, 151, 156);
+      border-radius: 25px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 5px solid rgb(107, 143, 113);
+      border-radius: 15px;
+    }
+
+    .contacts {
+      margin-top: 6px;
+    }
+
+    .contacts a {
+      font-size: 2.5em;
+      margin: 0 15px;
+      color: rgb(107, 143, 113);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: rgb(162, 159, 183);
+      padding: 20px;
+      border-radius: 5px;
+      width: 50%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+
+	/*add to modal itself*/
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      color: #aaa;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      cursor: pointer;
+    }
+
+    /* Media Query for responsiveness */
+    @media (max-width: 768px) {
+    	.container {
+        	flex-direction: column; /* Stack content vertically */
+        	justify-content: center;
+        	align-items: center;
+		}
+    	#left_side, #right_side {
+    		width: 100%; /* Full width for both sides */
+        	padding: 5%;
+      	}
+
+      	#right_side {
+        	margin-top: 20px; /* Add some space between stacked sections */
+      	}
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Left Side -->
+    <section id="left_side" class="contents">
+      <h1>Cory Lesher</h1>
+      <h3>Marketing Analytics //</h3>
+      <p>
+        Currently a one-man marketing analytics team at <a href="https://hungryroot.com/">Hungryroot</a>. Previously at
+        <a href="https://liveouter.com/" target="_blank">Outer</a> and <a href="https://www.meta.com/" target="_blank">Meta</a>.
+        Past projects for <a href="https://redbird.io/" target="_blank">Redbird</a>, 
+        <a href="https://thisisneeded.com/" target="_blank">Needed</a>, 
+        and <a href="https://flamingoestate.com/" target="_blank">Flamingo Estate</a>.
+        <br><br>
+        My work focuses on marketing measurement & attribution, as well as building customer-centric marketing strategies— this ranges from media mix modeling and lift testing to churn prediction and segmentation. I'm always open to partnering with companies looking to use data to improve their marketing decisions and operations. If that sounds like you, feel free to drop me a line.
+      </p>
+    </section>
+
+    <!-- Right Side -->
+    <section id="right_side" class="contents">
+      <div class="outer-border">
+        <img src="cml.jpg" alt="cml" height="400px">
+      </div>
+
+      <div class="contacts">
+        <a href="mailto:cory@cmlus.io"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://linkedin.com/in/corylesher" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://open.spotify.com/user/lesherc" target="_blank"><i class="fa-brands fa-spotify"></i></a>
+        <a href="https://letterboxd.com/clesh/" target="_blank"><i class="fa-brands fa-square-letterboxd"></i></a>
+      </div>
+    </section>
+
+    <!-- Modal Structure -->
+<!--     <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h5>About Me</h5>
+        <p>
+        	coming soon
+        </p>
+      </div>
+    </div> -->
+
+  </div>
+
+  <script>
+    // Modal script
+    var modal = document.getElementById("myModal");
+    var closeBtn = document.getElementsByClassName("close")[0];
+
+    function openModal() {
+      modal.style.display = "flex";
+    }
+
+    closeBtn.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>
